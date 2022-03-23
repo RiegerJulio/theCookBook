@@ -1,0 +1,22 @@
+.footer {
+  bottom: 0;
+  position: fixed;
+}
+
+.recomendations {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.recomendations img {
+  width: 180px;
+}
+
+.food-img {
+  width: 100px;
+}
+
+.white-space {
+  width: 40px;
+}

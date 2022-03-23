@@ -1,0 +1,38 @@
+.carousel-ing {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.food-name {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.explore-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-explore {
+  align-self: center;
+  width: 70vw;
+  margin-bottom: 10vh;
+}
+
+.btn-explore-text {
+  font-size: 1.3rem;
+}
+
+.select-container {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  /* background-color: white; */
+}

@@ -1,0 +1,37 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-fields {
+  align-self: center;
+  width: 70vw;
+  text-align: center;
+}
+
+.login-fields button{
+  width: 70vw;
+}
+
+label.active {
+  color: white;
+}
+
+.login-fields input {
+  color: white;
+}
+
+.paragraph-input {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.img-teste {
+  align-self: center;
+  width: 60vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+/* tentar mudar a cor da linhazinha */

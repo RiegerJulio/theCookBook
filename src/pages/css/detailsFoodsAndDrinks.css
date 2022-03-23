@@ -1,0 +1,77 @@
+.img-recipe {
+  width: 100vw;
+}
+
+.heart-outline{
+  width: 40px;
+}
+
+.actions-container {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-evenly;
+}
+
+.copy-info {
+  color: white;
+  text-align: center;
+}
+
+.category {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0vh 5vw 5vh 5vw;
+}
+
+.instructions {
+  color: white;
+}
+
+.youtube-box {
+  display: flex;
+  justify-content: center;
+}
+
+.ingredients-container {
+  color: white;
+  text-align: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.carousel-container {
+  /* height: 200px; */
+  padding-bottom: 5vh;
+}
+
+.start-btn {
+  width: 100vw;
+  margin-top: 3vh;
+  margin-bottom: 7vh;
+}
+
+.instructions-progress {
+  margin-top: 3vh;
+}
+
+.label-color {
+  color: white;
+}
+
+.done-recipes-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
+.mockup-done {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  justify-content: space-evenly;
+}
+
+.footer-icons {
+  font-size: 100px;
+}
