@@ -48,6 +48,7 @@ export default function Login(props) {
             value={ email }
             onChange={ ({ target }) => setEmail(target.value) }
             data-testid="email-input"
+            autoComplete='Email'
           />
         </div>
         <div className="input-field">
@@ -60,6 +61,7 @@ export default function Login(props) {
             value={ password }
             onChange={ ({ target }) => setPassword(target.value) }
             data-testid="password-input"
+            autoComplete='current-password'
           />
         </div>
         <button

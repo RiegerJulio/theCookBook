@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-max-depth */
-/* eslint-disable no-var */
 import React, { useState, useContext, useEffect } from 'react';
 import M from 'materialize-css';
 import Header from '../components/Header';
@@ -39,9 +37,8 @@ export default function Foods() {
 
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {
+    M.Collapsible.init(elems, {
     });
-    console.log(instances);
     setKind('/foods/');
   }, []);
 
@@ -49,7 +46,6 @@ export default function Foods() {
     if (categoryFilter === null || categoryFilter !== target.id) {
       const a = target.id;
       setButtonValue(a);
-      console.log(buttonValue);
       const filterMeals = await fetchMealsCategory(a);
       setMealsArray(filterMeals);
       setCategoryFilter(target.id);
@@ -62,8 +58,13 @@ export default function Foods() {
   return (
     <div className="page-container">
       <div className="header-container">
-        <Header title="Search for Foods" />
-        <img src={ headerLogo } alt="header logo" className="header-logo" />
+        <Header/>
+        <img
+          src={ headerLogo }
+          alt="header logo"
+          className="header-logo"
+          data-testid="header-Logo"
+        />
         <ButtonShowBar />
       </div>
         <Search />

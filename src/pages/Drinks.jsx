@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-max-depth */
-/* eslint-disable no-var */
 import React, { useContext, useState, useEffect } from 'react';
 import M from 'materialize-css';
 import Header from '../components/Header';
@@ -48,9 +46,8 @@ export default function Drinks() {
 
   useEffect(() => {
     var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {
+    M.Collapsible.init(elems, {
     });
-    console.log(instances);
     setKind('/drinks/');
   }, []);
 

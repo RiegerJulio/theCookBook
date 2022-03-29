@@ -18,6 +18,6 @@ export default function ButtonCategory({ strCategory, index, func }) {
 
 ButtonCategory.propTypes = {
   strCategory: PropTypes.string.isRequired,
-  index: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
   func: PropTypes.func.isRequired,
 };

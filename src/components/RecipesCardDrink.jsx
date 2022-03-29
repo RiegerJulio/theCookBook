@@ -1,16 +1,8 @@
 import React from 'react';
-// import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const THREE = 3;
-
 function RecipesCardDrink({ idDrink, strDrink, strDrinkThumb, index }) {
-  // const history = useHistory();
-
-  // const sendInfo = () => {
-  //   history.push(`/drinks/${idDrink}`);
-  // };
 
   return (
     <div className="card-container">
@@ -18,13 +10,6 @@ function RecipesCardDrink({ idDrink, strDrink, strDrinkThumb, index }) {
         <Link
           to={ `/drinks/${idDrink}` }
         >
-          {/* <button
-            type="button"
-            data-testid={ `${index}-recipe-card` }
-            key={ idDrink }
-            onClick={ sendInfo }
-            src={ strDrinkThumb }
-          > */}
           <div className="card-image">
             <img
               className="food-img"
@@ -38,10 +23,9 @@ function RecipesCardDrink({ idDrink, strDrink, strDrinkThumb, index }) {
               className="card-title white-text darken-4"
               data-testid={ `${index}-card-name` }
             >
-              { strDrink.split(' ').splice(0, THREE).join(' ') }
+              { strDrink }
             </span>
           </div>
-          {/* </button> */}
         </Link>
       </div>
     </div>

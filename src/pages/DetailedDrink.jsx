@@ -41,7 +41,7 @@ export default function DetailedDrink() {
   const history = useHistory();
   const { id } = useParams();
 
-  const testeFavorite = () => {
+  const imageFavorite = () => {
     const getLocalFav = getLocalStorage('favoriteRecipes');
     if (getLocalFav) {
       if (getLocalFav.some((a) => a.id === id)) {
@@ -58,7 +58,7 @@ export default function DetailedDrink() {
     requestApiFoods();
     testDoneRecipes(id);
     testInprogressRecipesCocktails(id);
-    testeFavorite();
+    imageFavorite();
   };
 
   useEffect(() => {
@@ -69,8 +69,6 @@ export default function DetailedDrink() {
       if (document.querySelector('.photos').classList) {
         document.querySelector('.photos').classList.remove('spinner');
       }
-      console.log(instance);
-    // eslint-disable-next-line no-magic-numbers
     }, 1000);
   }, []);
 
@@ -102,7 +100,6 @@ export default function DetailedDrink() {
             strCategory={ verifyAlcohoolic(itemRecovered[0].strAlcoholic,
               itemRecovered[0].strCategory) }
             strInstructions={ itemRecovered[0].strInstructions }
-            // onClickShare={ shareFunc }
             onClickFav={ () => favFuncDrink(id) }
             iconFav={ imageFav }
           />)
@@ -114,7 +111,6 @@ export default function DetailedDrink() {
               strDrinkThumb=""
               strCategory=""
               strInstructions=""
-              // onClickShare={ shareFunc }
               iconFav={ imageFav }
             />
           )
@@ -166,17 +162,6 @@ export default function DetailedDrink() {
           { btnValue }
         </button>
       )}
-      {/* {
-        verifyProgress && (
-          <button
-            type="button"
-            data-testid="start-recipe-btn"
-            style={ { position: 'fixed', bottom: '0px' } }
-          >
-            Continue Recipe
-          </button>
-        )
-      } */}
       <LowerMenu />
     </div>
   );

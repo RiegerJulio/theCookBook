@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-// import { Link } from 'react-router-dom';
 import M from 'materialize-css';
 import Header from '../components/Header';
 import LowerMenu from '../components/LowerMenu';
 import RecipesCardFood from '../components/RecipesCardFood';
-// import Search from '../components/Search';
 import MyContext from '../Context/MyContext';
 import {
   fetchMealNationalities,
@@ -38,11 +36,9 @@ export default function ExploreFoodsNat() {
   };
 
   useEffect(() => {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, {
-      // specify options here
+    const elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems, {
     });
-    console.log(instances);
     grabNationalities();
     getMeals();
   }, []);
@@ -59,7 +55,6 @@ export default function ExploreFoodsNat() {
       <div className="header-container">
         <Header title="Search for Foods" />
         <img src={ headerLogo } alt="header logo" className="header-logo" />
-        {/* <Search /> */}
         <div className="white-space"/>
       </div>
       <div className="select-container">
@@ -97,10 +92,6 @@ export default function ExploreFoodsNat() {
       <div className="meals-container">
         {
           mealsArray && mealsArray.map((meal, index) => (
-            // <Link
-            //   to={ `/foods/${meal.idMeal}` }
-            //   key={ meal.idMeal }
-            // >
             <RecipesCardFood
               key={ meal.idMeal }
               idMeal={ meal.idMeal }
@@ -108,7 +99,6 @@ export default function ExploreFoodsNat() {
               strMealThumb={ meal.strMealThumb }
               index={ index }
             />
-            // </Link>
           )).slice(0, NUMBER_CARDS_INITIAL)
         }
       </div>

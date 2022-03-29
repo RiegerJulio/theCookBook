@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
 import LowerMenu from '../components/LowerMenu';
-// import Search from '../components/Search';
 
 import headerLogo from '../images/header-logo.png';
 

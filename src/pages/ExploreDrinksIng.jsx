@@ -18,28 +18,21 @@ export default function ExploreFoodsIng() {
 
   const requestIngredients = async () => {
     const ingredients = await fetchDrinkIngredients();
-    console.log(ingredients);
     setInitialIngredients(ingredients);
-    console.log(initialIngredients);
   };
-
-  // const history = useHistory();
 
   const handleClick = async (ing) => {
     const response = await fetchDrinksIngredientName(ing);
     setDrinksArray(response);
-    // history.push('/foods');
   };
 
   useEffect(() => {
     setTimeout(() => {
       const elem = document.querySelector('.carousel');
-      const instance = M.Carousel.init(elem, {});
+      M.Carousel.init(elem, {});
       if (document.querySelector('.photos').classList) {
         document.querySelector('.photos').classList.remove('spinner');
       }
-      console.log(instance);
-    // eslint-disable-next-line no-magic-numbers
     }, 1000);
     requestIngredients();
   }, []);

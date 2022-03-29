@@ -17,12 +17,10 @@ export default function DrinksInProgress() {
 
   const history = useHistory();
   const idURLLocation = history.location.pathname.split('/')[2];
-  // console.log(idURLLocation);
 
   useEffect(async () => {
     const recoverData = await fetchDrinkDetailsId(idURLLocation);
     setItemRecovered([recoverData]);
-    // console.log(recoverData);
   }, []);
 
   return (

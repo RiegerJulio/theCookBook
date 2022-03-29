@@ -19,7 +19,6 @@ export default function DetailedDrinkComponent(props) {
     strDrinkThumb,
     strCategory,
     strInstructions,
-    // onClickShare,
     onClickFav,
     iconFav,
   } = props;

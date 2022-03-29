@@ -21,7 +21,6 @@ export default function DetailedFoodComponent(props) {
     strCategory,
     strInstructions,
     strYoutube,
-    // onClickShare,
     iconFav,
     onClickFav,
   } = props;

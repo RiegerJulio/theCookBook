@@ -42,9 +42,6 @@ export default function Routes() {
       <Route exact path="/drinks/:id/in-progress" component={ DrinksInProgress } />
       <Route exact path="/explore/drinks/nationalities" component={ Error } />
       <Route exact path="/end-message" component={ EndMessage } />
-      {/*
-      {/* <Route exact path="/headertest" component={ AllHeader } />
-      */}
     </Switch>
   );
 }

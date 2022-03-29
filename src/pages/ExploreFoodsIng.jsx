@@ -1,6 +1,3 @@
-/* eslint-disable no-magic-numbers */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-var */
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import M from 'materialize-css';
@@ -21,23 +18,18 @@ export default function ExploreFoodsIng() {
 
   const requestIngredients = async () => {
     const ingredients = await fetchMealIngredients();
-    console.log(ingredients);
     setInitialIngredients(ingredients);
-    console.log(initialIngredients);
   };
-
-  // const history = useHistory();
 
   const handleClick = async (ing) => {
     const response = await fetchMealsIngredientName(ing);
     setMealsArray(response);
-    // history.push('/foods');
   };
 
   useEffect(() => {
     setTimeout(() => {
       const elem = document.querySelector('.carousel');
-      const instance = M.Carousel.init(elem, {});
+      M.Carousel.init(elem, {});
       if (document.querySelector('.photos').classList) {
         document.querySelector('.photos').classList.remove('spinner');
       }
