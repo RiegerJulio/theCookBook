@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import { HiSearchCircle } from 'react-icons/hi';
-// import searchIcon from '../images/searchIcon.svg';
 
 import {
   fetchMealsIngredientName,
@@ -26,8 +24,6 @@ function Search() {
     setButtonValue,
     toggleShowBar,
   } = useContext(MyContext);
-
-  // const [toggleShowBar, setToggleShowBar] = useState(false);
 
   const recoverData = async (func1, func2) => {
     const mealsOrDrinks = kind === '/drinks/'

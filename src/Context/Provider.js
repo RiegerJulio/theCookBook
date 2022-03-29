@@ -50,6 +50,11 @@ function Provider({ children }) {
     setsearchbtn(!searchbtn);
   };
 
+  useEffect(() => {
+    requestApiFoods();
+    requestApiDrinks();
+  }, []);
+
   const requestApiFoods = async () => {
     const mealsApi = await fetchMeals();
     setMealsArray(mealsApi);
@@ -226,11 +231,6 @@ function Provider({ children }) {
     toggleShowBar,
     setToggleShowBar,
   };
-
-  useEffect(() => {
-    requestApiFoods();
-    requestApiDrinks();
-  }, []);
 
   return (
     <MyContext.Provider value={ stateHook }>

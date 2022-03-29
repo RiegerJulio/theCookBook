@@ -64,12 +64,10 @@ export default function DetailedFood() {
     recoverData();
     setTimeout(() => {
       const elem = document.querySelector('.carousel');
-      const instance = M.Carousel.init(elem, {});
+      M.Carousel.init(elem, {});
       if (document.querySelector('.photos').classList) {
         document.querySelector('.photos').classList.remove('spinner');
       }
-      console.log(instance);
-    // eslint-disable-next-line no-magic-numbers
     }, 1000);
   }, []);
 
@@ -95,7 +93,6 @@ export default function DetailedFood() {
               strCategory={ itemRecovered[0].strCategory }
               strInstructions={ itemRecovered[0].strInstructions }
               strYoutube={ itemRecovered[0].strYoutube }
-              // onClickShare={ shareFunc }
               onClickFav={ () => favFuncMeal(id) }
               iconFav={ imageFav }
             />)
@@ -108,8 +105,6 @@ export default function DetailedFood() {
               strCategory=""
               strInstructions=""
               strYoutube=""
-              // onClickShare={ shareFunc }
-              // onClickFav={ favFunc }
               iconFav={ imageFav }
             />
           )
@@ -128,7 +123,6 @@ export default function DetailedFood() {
         }
       </div>
       <h5 className="category" data-testid="recipe-category">Try With</h5>
-      {/* <div className="carousel-container"> */}
       <div className="carousel carousel-container">
         {
           drinksArray.length > 0
@@ -162,15 +156,6 @@ export default function DetailedFood() {
           { btnValue }
         </button>
       )}
-      {/* {verifyProgress && (
-        <button
-          type="button"
-          data-testid="start-recipe-btn"
-          style={ { position: 'fixed', bottom: '0px' } }
-        >
-          Continue Recipe
-        </button>
-      )} */}
       <LowerMenu />
     </div>
   );

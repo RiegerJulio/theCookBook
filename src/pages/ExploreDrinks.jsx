@@ -11,7 +11,6 @@ export default function ExploreFoods() {
 
   const handleRandom = async () => {
     const response = await fetchRandomDrink();
-    console.log(response);
     const drinkID = response.idDrink;
     history.push(`/drinks/${drinkID}`);
   };
@@ -35,7 +34,6 @@ export default function ExploreFoods() {
             By Ingredient
           </span>
         </Link>
-        {/* implementar logica abaixo */}
         <Link
           className="waves-effect waves-light btn-large btn-explore lime darken-2"
           to="#t"

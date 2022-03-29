@@ -68,7 +68,6 @@ export const fetchDrinkCategories = async () => {
   const response = await apiFetch.json();
   return response.drinks;
 };
-console.log(fetchDrinkCategories())
 
 export const fetchDrinksIngredientName = async (ingredientName) => {
   const apiFetch = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`);

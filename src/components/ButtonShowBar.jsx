@@ -12,11 +12,9 @@ export default function ButtonShowBar() {
       className="btn-search"
       type="button"
       data-testid="search-top-btn"
-      // src={ searchIcon }
       onClick={ () => setToggleShowBar(!toggleShowBar) }
     >
       <HiSearchCircle size={ 40 } color="#ffffff" />
-      {/* <img src={ searchIcon } alt="search icon" /> */}
     </button>
     </div>
   )
